@@ -1,0 +1,31 @@
+<div class="container">
+  <form method="POST" action="/movies">
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input" name="title" type="text" placeholder="Title" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Year</label>
+      <div class="control">
+        <input class="input" name="year" type="text" placeholder="Year" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="input" name="image" type="text" placeholder="Image" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Film Synopsis</label>
+      <div class="control">
+        <textarea class="textarea" name="filmSynopsis" placeholder="Film Synopsis" maxlength="580"></textarea>
+      </div>
+    </div>
+    <div class="control">
+      <button class="button is-primary">Submit</button>
+    </div>
+  </form>
+</div>

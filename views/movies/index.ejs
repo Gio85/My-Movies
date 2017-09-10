@@ -1,0 +1,39 @@
+<main class="container">
+  <form method="GET" id="director-form">
+    <div class="field has-addons has-addons-right is-horizontal">
+      <p class="control has-icons-left">
+        <span class="select">
+          <select name="origin">
+            <option selected disabled>Director</option>
+            <% directors.forEach(director => { %>
+              <option<% if(director === selectedDirector) { %> selected<% } %>><%= director %></option>
+            <% }) %>
+          </select>
+        </span>
+        <span class="icon is-small is-left">
+          <i class="fa fa-globe"></i>
+        </span>
+      </p>
+    </div>
+  </form>
+  <br>
+  <div class="columns is-multiline">
+    <% movies.forEach(movie => { %>
+      <div class="column is-one-quarter-desktop is-half-tablet">
+        <a href="/movies/<%= movie.id %>">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <img src="<%= movie.image %>" alt="<%= movie.title %>">
+              </figure>
+            </div>
+            <div class="card-content">
+              <h3 class="title"><%= movie.title %></h3>
+              <h4 class="subtitle"><%= movie.year %></h4>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% }) %>
+  </div>
+</main>

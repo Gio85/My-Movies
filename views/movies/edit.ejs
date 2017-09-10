@@ -1,0 +1,32 @@
+<div class="container">
+  <form method="POST" action="/movies/<%= movie.id %>">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input" name="title" type="text" placeholder="Title" value="<%= movie.title %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Year</label>
+      <div class="control">
+        <input class="input" name="year" type="text" placeholder="Year" value="<%= movie.year %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="input" name="image" type="text" placeholder="Image" value="<%= movie.image %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Film Synopsis</label>
+      <div class="control">
+        <textarea class="textarea" name="filmSynopsis" placeholder="Film Synopsis"><%= movie.filmSynopsis %></textarea>
+      </div>
+    </div>
+    <div class="control">
+      <button class="button is-primary">Submit</button>
+    </div>
+  </form>
+</div>

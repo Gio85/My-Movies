@@ -1,0 +1,12 @@
+<h1 class="title is-2">Directors</h1>
+<ul class="columns is-multiline">
+  <% directors.forEach(director => { %>
+    <li class="column is-half">
+      <div class="box">
+        <h2><%= director.name %></h2>
+        <img src="<%= director.image %>" alt="<%= director.name %>">
+        <p><%= director.country %></p>
+      </div>
+    </li>
+  <% }) %>
+</ul>

@@ -1,0 +1,17 @@
+.hero.homepage {
+  background-image: url(http://www.thetoc.gr/images/articles/0/article_5102/article5102.w_hr.jpg);
+  background-size: cover;
+}
+
+.navbar-menu.is-active {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background-color: black;
+}
+body{
+  background-color: black;
+}
+.title, .subtitle{
+  color: gold;
+}

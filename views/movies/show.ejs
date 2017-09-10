@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <figure class="image">
+        <img src="<%= movie.image %>" alt="<%= movie.title %>">
+      </figure>
+    </div>
+    <div class="column">
+      <h3 class="title"><%= movie.title %></h3>
+      <h4 class="subtitle"><%= movie.year %></h4>
+      <div class="icon is-small">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <p><%= movie.filmSynopsis %></p>
+        <% if(movie.user){ %>
+          <p>Added by: <strong><%= movie.user.username %></strong></p>
+        <% } %>
+      <br>
+      <% if(locals.isAuthenticated && movie.user && movie.user.id === locals.currentUser.id) {%>
+      <form method="POST" action="/movies/<%= movie.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit</a>
+        <button class="button is-danger">Delete</button>
+      </form>
+      <% } %>
+    </div>
+  </div>
+</div>
