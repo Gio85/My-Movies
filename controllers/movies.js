@@ -5,9 +5,14 @@ function moviesIndex(req, res) {
   Movie
     .find()
     .populate('director')
+    .sort({ name: 1 })
     .exec()
-    .then((movies) =>{
-      res.render('movies/index', {movies});
+    .then(movies => {
+      const directorNames = Array.from(new Set(movies.map(movie => movie.director).sort()));
+
+      if(req.query.director) movies = movies.filter(movie => movie.director === req.query.director);
+
+      res.render('movies/index', { movies, directorNames, selectedDirector: req.query.director });
     })
     .catch((err) =>{
       res.status(500).render('error', { err });

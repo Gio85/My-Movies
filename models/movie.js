@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const commentsSchema = new mongoose.Schema({
   text: String,
-  rating: Number
+  rating: Number,
+  user: String
 });
 
 const movieSchema = new mongoose.Schema({

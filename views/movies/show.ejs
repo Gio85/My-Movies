@@ -33,14 +33,45 @@
   <ul>
     <% movie.comments.forEach(comment => { %>
       <li>
-      <p><%= comment.text %> - <%= comment.rating %>/5</p>
-      <% if(locals.isAuthenticated) { %>
+      <p><%= comment.text %> - <%= comment.rating %>/5 Added by <%= comment.user %></p>
       <form method="POST" action="/movies/<%= movie.id %>/comments/<%= comment.id %>">
       <input type="hidden" name="_method" value="DELETE">
       <button class="button is-danger">Delete</button>
       </form>
       </li>
-      <% } %>
       <% }) %>
     </ul>
+    <% if(locals.isAuthenticated) { %>
+      <form method="POST" action="/movies/<%= movie.id %>/comments">
+        <div>
+          <h3 class="title is-3">Leave your comment & rating below</h3>
+          <label>Name</label>
+          <input type="text" name="username">
+        </div>
+        <div>
+          <label>Comment</label>
+          <textarea name="text"></textarea>
+        </div>
+        <div>
+          <label>Rating</label><br>
+          <label>
+            1 <input type="radio" value="1" name="rating">
+          </label>
+          <label>
+            2 <input type="radio" value="2" name="rating">
+          </label>
+          <label>
+            3 <input type="radio" value="3" name="rating">
+          </label>
+          <label>
+            4 <input type="radio" value="4" name="rating">
+          </label>
+          <label>
+            5 <input type="radio" value="5" name="rating">
+          </label>
+        </div>
+
+        <button class="button is-info">Add</button>
+      </form>
+        <% } %>
 </div>
