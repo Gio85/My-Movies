@@ -3,11 +3,9 @@
     <div class="field has-addons has-addons-right is-horizontal">
       <p class="control has-icons-left">
         <span class="select">
-          <select name="director">
+          <select name="directors">
             <option selected disabled>Director</option>
-            <% directors.forEach(director => { %>
-              <option <% if(director === selectedDirector) { %> selected <% } %>><%= director %></option>
-            <% }) %>
+            
           </select>
         </span>
         <span class="icon is-small is-left">

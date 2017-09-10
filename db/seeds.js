@@ -70,7 +70,7 @@ Director
         year: '1998',
         director: directors[0],
         filmSynopsis: 'Captain John Miller (Tom Hanks) takes his men behind enemy lines to find Private James Ryan, whose three brothers have been killed in combat. Surrounded by the brutal realties of war, while searching for Ryan, each man embarks upon a personal journey and discovers their own strength to triumph over an uncertain future with honor, decency and courage.',
-        image: 'http://t2.gstatic.com/images?q=tbn:ANd9GcR0lDhR_dXAKTm9wysp3nWu6kP0V5skJBVbCNC_Q8urAWcr4iF_',
+        image: 'https://www.sunsetcast.com/poster/120815.jpg',
         comments: [{
           text: 'Good',
           rating: 4
@@ -82,7 +82,7 @@ Director
         year: '1982',
         director: directors[0],
         filmSynopsis: 'After a gentle alien becomes stranded on Earth, the being is discovered and befriended by a young boy named Elliott (Henry Thomas). Bringing the extraterrestrial into his suburban California house, Elliott introduces E.T., as the alien is dubbed, to his brother and his little sister, Gertie (Drew Barrymore), and the children decide to keep its existence a secret. Soon, however, E.T. falls ill, resulting in government intervention and a dire situation for both Elliott and the alien.',
-        image: 'http://t1.gstatic.com/images?q=tbn:ANd9GcRGJHE2d9ETIgpONE3pUTXMcUoBMkahlppFmicaL8FG8ovE37x4',
+        image: 'http://upic.me/i/hl/kp700.jpg',
         comments: [{
           text: 'Good',
           rating: 4
@@ -94,7 +94,7 @@ Director
         year: '1993',
         director: directors[0],
         filmSynopsis: 'In Steven Spielberg\'s massive blockbuster, paleontologists Alan Grant (Sam Neill) and Ellie Sattler (Laura Dern) and mathematician Ian Malcolm (Jeff Goldblum) are among a select group chosen to tour an island theme park populated by dinosaurs created from prehistoric DNA. While the park\'s mastermind, billionaire John Hammond (Richard Attenborough), assures everyone that the facility is safe, they find out otherwise when various ferocious predators break free and go on the hunt.',
-        image: 'http://t3.gstatic.com/images?q=tbn:ANd9GcRZh-cd7xlz0T8SiJRaQbpy49FtVDBjQXfcJUAlWCXT0L1YkVbj',
+        image: 'https://cdn-images.cinenews.be/image/f660x940/q80/mm/befr/movies2127/posters/jurassic-park.20170228011453.jpg',
         comments: [{
           text: 'Good',
           rating: 4
@@ -154,7 +154,7 @@ Director
         year: '1990',
         director: directors[1],
         filmSynopsis: 'A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes. A drug addiction and a few mistakes ultimately unravel his climb to the top. Based on the book "Wiseguy" by Nicholas Pileggi.',
-        image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcSkuxYKBhyPQq4e_cbYRDfZRjWkUx2GIKlUpUkHiuVeLg2GhN0D',
+        image: 'https://discogslabs.imgix.net/films/55d79fa23dff1b001140ac02.jpg?s=f1c42fff5bc51babd5cf8e399ca75a80',
         comments: [{
           text: 'Good',
           rating: 4
@@ -166,7 +166,7 @@ Director
         year: '1987',
         director: directors[2],
         filmSynopsis: 'Stanley Kubrick\'s take on the Vietnam War follows smart-aleck Private Davis (Matthew Modine), quickly christened "Joker" by his foul-mouthed drill sergeant (R. Lee Ermey), and pudgy Private Lawrence (Vincent D\'Onofrio), nicknamed "Gomer Pyle," as they endure the rigors of basic training. Though Pyle takes a frightening detour, Joker graduates to the Marine Corps and is sent to Vietnam as a journalist, covering -- and eventually participating in -- the bloody Battle of Hué.',
-        image: 'http://t3.gstatic.com/images?q=tbn:ANd9GcRvS0gpcmYItYpYqNswzvlibugwezaH-13M8y4kiJnCthNS9nX-',
+        image: 'http://2.bp.blogspot.com/-7aXM0S5qvLM/UXQyeQ2fdlI/AAAAAAAAAic/E7iR60sbLuc/s1600/_La_chaqueta_metalica_(Stanley_Kubrick)_aleman.JPG',
         comments: [{
           text: 'Good',
           rating: 4
@@ -178,7 +178,7 @@ Director
         year: '1980',
         director: directors[2],
         filmSynopsis: 'Jack Torrance (Jack Nicholson) becomes winter caretaker at the isolated Overlook Hotel in Colorado, hoping to cure his writer\'s block. He settles in along with his wife, Wendy (Shelley Duvall), and his son, Danny (Danny Lloyd), who is plagued by psychic premonitions. As Jack\'s writing goes nowhere and Danny\'s visions become more disturbing, Jack discovers the hotel\'s dark secrets and begins to unravel into a homicidal maniac hell-bent on terrorizing his family.',
-        image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcSuyZ3Ido0NkD-KSJAoY7eosym_AHdZ891pvUaUOryPCIDJZFdy',
+        image: 'http://www.name-list.net/img/portrait/Srining_9.jpg',
         comments: [{
           text: 'Good',
           rating: 4
@@ -298,7 +298,7 @@ Director
         year: '1979',
         director: directors[4],
         filmSynopsis: 'In Vietnam in 1970, Captain Willard (Martin Sheen) takes a perilous and increasingly hallucinatory journey upriver to find and terminate Colonel Kurtz (Marlon Brando), a once-promising officer who has reportedly gone completely mad. In the company of a Navy patrol boat filled with street-smart kids, a surfing-obsessed Air Cavalry officer (Robert Duvall), and a crazed freelance photographer (Dennis Hopper), Willard travels further and further into the heart of darkness.',
-        image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcT9GtFRvwy8cYE2gjMTzfR0MW_ubpZ_dcD0S2CkfTqBoiobgwFv',
+        image: 'https://ugc.kn3.net/i/760x/http://static.rogerebert.com/uploads/movie/movie_poster/apocalypse-now-1979/large_xytHTHqtQlXtzyJTtlqnVjvDdqd.jpg',
         comments: [{
           text: 'Good',
           rating: 4
@@ -358,7 +358,7 @@ Director
         year: '1992',
         director: directors[6],
         filmSynopsis: 'When prostitute Delilah Fitzgerald (Anna Thomson) is disfigured by a pair of cowboys in Big Whiskey, Wyoming, her fellow brothel workers post a reward for their murder, much to the displeasure of sheriff Little Bill Daggett (Gene Hackman), who doesn\'t allow vigilantism in his town. Two groups of gunfighters, one led by aging former bandit William Munny (Clint Eastwood), the other by the florid English Bob (Richard Harris), come to collect the reward, clashing with each other and the sheriff.',
-        image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcTdbficQLq6OrRN7xoO8eg9196ABckz_FC6D1GSgVr0lUEU89gi',
+        image: 'https://pbs.twimg.com/media/B_UdlQqVAAEIjlI.jpg:large',
         comments: [{
           text: 'Good',
           rating: 4
@@ -442,7 +442,7 @@ Director
         year: '2010',
         director: directors[7],
         filmSynopsis: 'Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people\'s dreams and steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves. Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone\'s mind. If he succeeds, it will be the perfect crime, but a dangerous enemy anticipates Cobb\'s every move.',
-        image: 'http://t2.gstatic.com/images?q=tbn:ANd9GcRo9vfJCM6dzPkZHIHBVCtlJnAnew9Ai26kEdrli0-tfmatmciD',
+        image: 'http://www.markgazica.com/wp-content/uploads/2017/04/poster10-min-3.jpg',
         comments: [{
           text: 'Good',
           rating: 4
@@ -478,7 +478,7 @@ Director
         year: '1997',
         director: directors[8],
         filmSynopsis: 'James Cameron\'s "Titanic" is an epic, action-packed romance set against the ill-fated maiden voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time, the largest moving object ever built. She was the most luxurious liner of her era -- the "ship of dreams" -- which ultimately carried over 1,500 people to their death in the ice cold waters of the North Atlantic in the early hours of April 15, 1912.',
-        image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcQhYjUIu2o5v5u3rfJpCq5Cz0Q9WK--XdYxai_N2d0ImohPiIOp',
+        image: 'https://cdn2.hercampus.com/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY1200_CR88,0,630,1200_AL_.jpg',
         comments: [{
           text: 'Good',
           rating: 4
@@ -490,7 +490,7 @@ Director
         year: '2009',
         director: directors[8],
         filmSynopsis: 'On the lush alien world of Pandora live the Na\'vi, beings who appear primitive but are highly evolved. Because the planet\'s environment is poisonous, human/Na\'vi hybrids, called Avatars, must link to human minds to allow for free movement on Pandora. Jake Sully (Sam Worthington), a paralyzed former Marine, becomes mobile again through one such Avatar and falls in love with a Na\'vi woman (Zoe Saldana). As a bond with her grows, he is drawn into a battle for the survival of her world.',
-        image: 'http://t0.gstatic.com/images?q=tbn:ANd9GcQCfmvrE4fMo2cd8esc7mDZPtFSJThAujddMPkRtti1_ij6u-jp',
+        image: 'https://cf.girlsaskguys.com/a48376/9c001075-72d2-40d3-80c0-6ef97c9dad60.jpg',
         comments: [{
           text: 'Good',
           rating: 4

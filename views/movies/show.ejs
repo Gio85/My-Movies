@@ -12,10 +12,14 @@
         <i class="fa fa-pencil"></i>
       </div>
       <p><%= movie.filmSynopsis %></p>
+        <% if(locals.isAuthenticated) { %>
+      <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit Synopsis</a>
+      <% } %>
         <% if(movie.user){ %>
           <p>Added by: <strong><%= movie.user.username %></strong></p>
         <% } %>
       <br>
+
       <% if(locals.isAuthenticated && movie.user && movie.user.id === locals.currentUser.id) {%>
       <form method="POST" action="/movies/<%= movie.id %>">
         <input type="hidden" name="_method" value="DELETE">
@@ -25,4 +29,18 @@
       <% } %>
     </div>
   </div>
+  <h4 class="subtitle is-4">Comments and Rating</h4>
+  <ul>
+    <% movie.comments.forEach(comment => { %>
+      <li>
+      <p><%= comment.text %> - <%= comment.rating %>/5</p>
+      <% if(locals.isAuthenticated) { %>
+      <form method="POST" action="/movies/<%= movie.id %>/comments/<%= comment.id %>">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="button is-danger">Delete</button>
+      </form>
+      </li>
+      <% } %>
+      <% }) %>
+    </ul>
 </div>

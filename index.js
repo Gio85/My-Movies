@@ -6,7 +6,10 @@ const mongoose        = require('mongoose');
 mongoose.Promise      = require('bluebird');
 const router          = require('./config/routes');
 const methodOverride  = require('method-override');
-const { dbURI, port } = require('./config/environment');
+const { dbURI, port, secret } = require('./config/environment');
+const session = require('express-session');
+const flash = require('express-flash');
+const userAuth = require('./lib/userAuth');
 
 mongoose.connect(dbURI, {useMongoClient: true});
 
@@ -25,6 +28,14 @@ app.use(methodOverride((req) => {
   }
 }));
 
+app.use(session({
+  secret: secret,// questo secret lo trovi in environment. fatto cosi per DRY the code
+  resave: false,
+  saveUnitialized: false
+}));
+app.use(flash());
+
+app.use(userAuth);
 // request handles
 app.use(router);
 
