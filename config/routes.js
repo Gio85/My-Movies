@@ -10,7 +10,12 @@ const sessions = require('../controllers/sessions');
 router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 
 router.route('/directors')
-  .get(directors.index);
+  .get(directors.index)
+  .post(secureRoute, directors.create);
+
+router.route('/directors/new')
+  .get(secureRoute, directors.new);
+
 router.route('/movies')
   .get(movies.index)
   .post(secureRoute, movies.create);

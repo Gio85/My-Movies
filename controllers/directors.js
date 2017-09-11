@@ -13,6 +13,31 @@ function directorsIndex(req, res) {
     });
 }
 
+function directorsNew(req, res) {
+  Director
+    .find()
+    .exec()
+    .then((directors) =>{
+      res.render('directors/new', {directors});
+    })
+    .catch((err) => {
+      res.status(500).render('error', { err });
+    });
+}
+
+function directorsCreate(req, res) {
+  req.body.user = req.currentUser;
+  Director
+    .create(req.body)
+    .then(() => {
+      res.redirect('/directors');
+    })
+    .catch((err) => {
+      res.status(500).render('error', { err });
+    });
+}
 module.exports = {
-  index: directorsIndex
+  index: directorsIndex,
+  new: directorsNew,
+  create: directorsCreate
 };
