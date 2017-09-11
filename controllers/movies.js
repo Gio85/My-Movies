@@ -5,12 +5,10 @@ function moviesIndex(req, res) {
   Movie
     .find(req.query)// aggiunto questo per filtrare il film in base al regista
     .populate('director')
-    .sort({ name: 1 })
     .exec()
     .then(movies => {
       return Director// tutto questo per mostrare i film del regista selezionato
         .find()
-        .sort({ name: 1 })
         .exec()
         .then(directors => {
           res.render('movies/index', { movies, directors, selectedDirector: req.query.director });

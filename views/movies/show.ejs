@@ -25,7 +25,13 @@
       <p><%= movie.filmSynopsis %></p>
       <% if(locals.isAuthenticated) { %>
 
-      <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit Synopsis</a>
+      <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit</a>
+      <% if(locals.isAuthenticated && movie.user && movie.user.id === locals.currentUser.id) {%>
+      <form method="POST" action="/movies/<%= movie.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="button is-danger">Delete</button>
+      </form>
+      <% } %>
       <% } %>
       <br><br>
       <% if(movie.user){ %>
@@ -37,16 +43,7 @@
       <% if(locals.isAuthenticated) { %>
       <a class="button is-primary" href="https://ororo.tv/en/channels" target="_blank">Streaming</a>
       <% } %>
-
       <br>
-
-      <% if(locals.isAuthenticated && movie.user && movie.user.id === locals.currentUser.id) {%>
-      <form method="POST" action="/movies/<%= movie.id %>">
-        <input type="hidden" name="_method" value="DELETE">
-        <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit</a>
-        <button class="button is-danger">Delete</button>
-      </form>
-      <% } %>
     </div>
   </div>
   <h4 class="subtitle is-4">Comments and Rating</h4>

@@ -7,6 +7,19 @@
       </div>
     </div>
     <div class="field">
+      <label for="title">Director</label>
+      <div class="control">
+        <div class="select">
+          <select name="director">
+            <% directors.forEach((director) =>{%>
+              <option value="<%= director.id %>"><%= director.name%></option>
+              <% }) %>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
       <label class="label">Year</label>
       <div class="control">
         <input class="input" name="year" type="text" placeholder="Year" required>
