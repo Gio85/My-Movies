@@ -15,6 +15,14 @@
         <% if(locals.isAuthenticated) { %>
       <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit Synopsis</a>
       <% } %>
+      <br><br>
+
+      <h3 class="title is-3">Links</h3>
+      <a class="button is-primary" href="<%= movie.youtube %>" target="_blank">Youtube</a>
+      <a class="button is-primary" href="<%= movie.wiki %>" target="_blank">wikipedia</a>
+      <% if(locals.isAuthenticated) { %>
+      <a class="button is-primary" href="https://ororo.tv/en/channels" target="_blank">Streaming</a>
+      <% } %>
         <% if(movie.user){ %>
           <p>Added by: <strong><%= movie.user.username %></strong></p>
         <% } %>

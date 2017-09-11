@@ -5,9 +5,9 @@
         <span class="select">
           <select name="director">
             <option selected disabled>Director</option>
-            <% directorNames.forEach(director => { %>
-                <option<% if(director === selectedDirector) { %> selected <% } %>><%= director %></option>
-              <% }) %>
+            <% directors.forEach(director => { %>
+              <option value="<%= director.id %>" <% if(director.id === selectedDirector) { %>selected<% } %>><%= director.name %></option>
+            <% }) %>
           </select>
         </span>
         <span class="icon is-small is-left">

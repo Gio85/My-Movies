@@ -7,11 +7,18 @@
   position: absolute;
   width: 100%;
   z-index: 10;
-  background-color: black;
+  background-color: grey;
 }
 body{
-  background-color: black;
+  background-color: grey;
 }
 .title, .subtitle{
-  color: gold;
+  color: black;
 }
+p{
+  color: black;
+}
+// .is-fixed-top{
+//   position: fixed;
+//   width: 100%;
+// }

@@ -11,6 +11,8 @@ const movieSchema = new mongoose.Schema({
   year: String,
   director: {type: mongoose.Schema.ObjectId, ref: 'Director'},
   filmSynopsis: { type: String, maxlength: 580 },
+  youtube: String,
+  wiki: String,
   image: String,
   comments: [commentsSchema]
 });

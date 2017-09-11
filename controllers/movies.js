@@ -3,20 +3,20 @@ const Director = require('../models/director');
 
 function moviesIndex(req, res) {
   Movie
-    .find()
+    .find(req.query)
     .populate('director')
     .sort({ name: 1 })
     .exec()
     .then(movies => {
-      const directorNames = Array.from(new Set(movies.map(movie => movie.director).sort()));
-
-      if(req.query.director) movies = movies.filter(movie => movie.director === req.query.director);
-
-      res.render('movies/index', { movies, directorNames, selectedDirector: req.query.director });
+      return Director
+        .find()
+        .sort({ name: 1 })
+        .exec()
+        .then(directors => {
+          res.render('movies/index', { movies, directors, selectedDirector: req.query.director });
+        });
     })
-    .catch((err) =>{
-      res.status(500).render('error', { err });
-    });
+    .catch((err) => res.status(500).render('error', { err }));
 }
 
 function moviesShow(req, res) {
@@ -45,6 +45,7 @@ function moviesNew(req, res) {
 }
 
 function moviesCreate(req, res) {
+  req.body.user = req.currentUser;
   Movie
     .create(req.body)
     .then(() => {
