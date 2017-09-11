@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const commentsSchema = new mongoose.Schema({
   text: String,
   rating: Number,
-  user: String
+  user: {type: mongoose.Schema.ObjectId, ref: 'User'}
 });
 
 const movieSchema = new mongoose.Schema({
@@ -13,6 +13,7 @@ const movieSchema = new mongoose.Schema({
   filmSynopsis: { type: String, maxlength: 580 },
   youtube: String,
   wiki: String,
+  user: {type: mongoose.Schema.ObjectId, ref: 'User'},
   image: String,
   comments: [commentsSchema]
 });

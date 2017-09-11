@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const directorSchema = new mongoose.Schema({
   name: String,
+  wiki: String,
   country: String,
   image: String,
   synopsis: String

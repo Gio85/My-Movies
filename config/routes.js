@@ -25,8 +25,8 @@ router.route('/movies/:id')
 router.route('/movies/:id/edit')
   .get(secureRoute, movies.edit);
 
-router.post('/movies/:id/comments', movies.commentsCreate);
-router.delete('/movies/:id/comments/:commentId', movies.commentsDelete);
+router.post('/movies/:id/comments', secureRoute, movies.commentsCreate);
+router.delete('/movies/:id/comments/:commentId', secureRoute, movies.commentsDelete);
 
 router.route('/register')
   .get(registrations.new)

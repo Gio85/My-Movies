@@ -3,12 +3,12 @@ const Director = require('../models/director');
 
 function moviesIndex(req, res) {
   Movie
-    .find(req.query)
+    .find(req.query)// aggiunto questo per filtrare il film in base al regista
     .populate('director')
     .sort({ name: 1 })
     .exec()
     .then(movies => {
-      return Director
+      return Director// tutto questo per mostrare i film del regista selezionato
         .find()
         .sort({ name: 1 })
         .exec()
@@ -22,6 +22,7 @@ function moviesIndex(req, res) {
 function moviesShow(req, res) {
   Movie
     .findById(req.params.id)
+    .populate('user comments.user')
     .exec()
     .then((movie) => {
       if(!movie) return res.status(404).send('Not Found');
@@ -108,6 +109,7 @@ function moviesDelete(req, res) {
 }
 
 function moviesCommentsCreate(req, res) {
+  req.body.user = req.currentUser;
   Movie
     .findById(req.params.id)
     .exec()

@@ -16,16 +16,16 @@
       <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit Synopsis</a>
       <% } %>
       <br><br>
-
+      <% if(movie.user){ %>
+        <p>Added by: <strong><%= movie.user.username %></strong></p>
+      <% } %>
       <h3 class="title is-3">Links</h3>
       <a class="button is-primary" href="<%= movie.youtube %>" target="_blank">Youtube</a>
       <a class="button is-primary" href="<%= movie.wiki %>" target="_blank">wikipedia</a>
       <% if(locals.isAuthenticated) { %>
       <a class="button is-primary" href="https://ororo.tv/en/channels" target="_blank">Streaming</a>
       <% } %>
-        <% if(movie.user){ %>
-          <p>Added by: <strong><%= movie.user.username %></strong></p>
-        <% } %>
+
       <br>
 
       <% if(locals.isAuthenticated && movie.user && movie.user.id === locals.currentUser.id) {%>
@@ -41,13 +41,16 @@
   <ul>
     <% movie.comments.forEach(comment => { %>
       <li>
-      <p><%= comment.text %> - <%= comment.rating %>/5 Added by <%= comment.user %></p>
-      <form method="POST" action="/movies/<%= movie.id %>/comments/<%= comment.id %>">
-      <input type="hidden" name="_method" value="DELETE">
-      <button class="button is-danger">Delete</button>
-      </form>
+        <p><%= comment.text %> - <%= comment.rating %>/5 Added by <%= comment.user.username %></p>
+        <% if(locals.isAuthenticated && comment.user && comment.user.id === locals.currentUser.id) {%>
+          <form method="POST" action="/movies/<%= movie.id %>/comments/<%= comment.id %>">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="button is-danger">Delete</button>
+          </form>
+        <% } %>
       </li>
       <% }) %>
+
     </ul>
     <% if(locals.isAuthenticated) { %>
       <form method="POST" action="/movies/<%= movie.id %>/comments">

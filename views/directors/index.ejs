@@ -3,8 +3,8 @@
   <% directors.forEach(director => { %>
     <li class="column is-half">
       <div class="box">
-        <h2 class="title is-2"><%= director.name %></h2>
-        <img src="<%= director.image %>" alt="<%= director.name %>"><p><%= director.synopsis %></p>
+        <a href="<%= director.wiki %>" target="_blank"><h2 class="title is-2"><%= director.name %></h2>
+        <img src="<%= director.image %>" alt="<%= director.name %>"></a><p><%= director.synopsis %></p>
         <p><%= director.country %></p>
       </div>
     </li>
