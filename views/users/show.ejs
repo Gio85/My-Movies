@@ -1,26 +1,11 @@
-<main class="container">
-  <form method="GET" id="director-form">
-    <div class="field has-addons has-addons-right is-horizontal">
-      <p class="control has-icons-left">
-        <span class="select">
-          <select name="director">
-            <option selected disabled>Director</option>
-            <% directors.forEach(director => { %>
-              <option value="<%= director.id %>" <% if(director.id === selectedDirector) { %>selected<% } %>><%= director.name %></option>
-            <% }) %>
-          </select>
-        </span>
-        <span class="icon is-small is-left">
-          <i class="fa fa-globe"></i>
-        </span>
-      </p>
-    </div>
-  </form>
+<div class="container">
+  <h3 class="title"><%= user.username %></h3>
   <br>
+  <h4 class="title">Favorites</h4>
   <div class="columns is-multiline">
-    <% movies.forEach(movie => { %>
+    <% user.favorites.forEach(movie => { %>
       <div class="column is-one-quarter-desktop is-half-tablet">
-      <% if(locals.isAuthenticated) { %>
+        <% if(locals.isAuthenticated) { %>
           <form method="POST" action="/movies/<%= movie.id %>/favorite" class="favorite">
             <button>
               <% if(locals.currentUser.hasFavorited(movie)) { %>
@@ -40,11 +25,11 @@
             </div>
             <div class="card-content">
               <h3 class="title"><%= movie.title %></h3>
-              <h4 class="subtitle"><%= movie.year %></h4>
+              <h4 class="subtitle"><%= movie.director %></h4>
             </div>
           </div>
         </a>
       </div>
     <% }) %>
   </div>
-</main>
+</div>

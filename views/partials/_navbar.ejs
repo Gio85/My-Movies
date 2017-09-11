@@ -19,6 +19,7 @@
         <a class="navbar-item" href="/register">Register</a>
         <a class="navbar-item" href="/login">Login</a>
         <% } else {%>
+          <a class="navbar-item" href="/users/<%= locals.currentUser.id %>">My favorites</a>
           <a class="navbar-item" href="/movies/new">New Movie</a>
           <a class="navbar-item" href="/logout">Logout</a>
           <% } %>

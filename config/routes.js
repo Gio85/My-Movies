@@ -3,6 +3,7 @@ const secureRoute = require('../lib/secureRoute');
 
 const movies = require('../controllers/movies');
 const directors = require('../controllers/directors');
+const users = require('../controllers/users');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
 
@@ -25,6 +26,9 @@ router.route('/movies/:id')
 router.route('/movies/:id/edit')
   .get(secureRoute, movies.edit);
 
+router.route('/movies/:id/favorite')
+  .post(secureRoute, movies.favorite);
+
 router.post('/movies/:id/comments', secureRoute, movies.commentsCreate);
 router.delete('/movies/:id/comments/:commentId', secureRoute, movies.commentsDelete);
 
@@ -35,6 +39,10 @@ router.route('/register')
 router.route('/login')
   .get(sessions.new)
   .post(sessions.create);
+
+router.route('/users/:id')
+  .get(users.show)
+  .delete(secureRoute, users.delete);
 
 router.get('/logout', sessions.delete);
 

@@ -4,7 +4,8 @@ const bcrypt = require('bcrypt');
 const userSchema = new mongoose.Schema({
   username: {type: String, required: true, unique: true },
   email: {type: String, required: true, unique: true },
-  password: {type: String, required: true}
+  password: {type: String, required: true},
+  favorites: [{ type: mongoose.Schema.ObjectId, ref: 'Movie' }]
 });
 
 // questa e' una variabile virtuale che ci permette di controllare se la password e' la stessa con la conferma
@@ -40,5 +41,9 @@ userSchema.methods.validatePassword = function validatePassword(password) {
   return bcrypt.compareSync(password, this.password);
 };
 
+userSchema.methods.hasFavorited = function hasFavorited(movie) {
+  if(!movie) return false;
+  return !!this.favorites.find(_movie => movie.id === _movie.id);
+};
 
 module.exports = mongoose.model('User', userSchema);

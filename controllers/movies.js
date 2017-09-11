@@ -91,6 +91,21 @@ function moviesEdit(req, res) {
     });
 }
 
+function moviesFavorite(req, res) {
+  // if the selected movie is not in the user's favorites
+  if(!req.currentUser.favorites.find(movie => movie.id === req.params.id)) {
+    // add the movie id to the user's favorites
+    req.currentUser.favorites.push(req.params.id);
+  } else {
+    // remove the movie from the user's favorites
+    req.currentUser.favorites = req.currentUser.favorites.filter(movie => movie.id !== req.params.id);
+  }
+
+  // save the user
+  req.currentUser.save()
+    .then(() => res.redirect('back'));
+}
+
 function moviesDelete(req, res) {
   Movie
     .findById(req.params.id)
@@ -141,6 +156,7 @@ module.exports = {
   create: moviesCreate,
   update: moviesUpdate,
   edit: moviesEdit,
+  favorite: moviesFavorite,
   delete: moviesDelete,
   commentsCreate: moviesCommentsCreate,
   commentsDelete: moviesCommentsDelete
