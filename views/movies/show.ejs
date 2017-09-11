@@ -8,11 +8,6 @@
     <div class="column">
       <h3 class="title"><%= movie.title %></h3>
       <h4 class="subtitle"><%= movie.year %></h4>
-      <div class="icon is-small">
-        <i class="fa fa-pencil"></i>
-      </div>
-      <p><%= movie.filmSynopsis %></p>
-      <% if(locals.isAuthenticated) { %>
       <form method="POST" action="/movies/<%= movie.id %>/favorite" class="favorite">
             <button>
               <% if(locals.currentUser.hasFavorited(movie)) { %>
@@ -22,6 +17,14 @@
               <% } %>
             </button>
           </form>
+          <br>
+          <br>
+      <div class="icon is-small">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <p><%= movie.filmSynopsis %></p>
+      <% if(locals.isAuthenticated) { %>
+
       <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit Synopsis</a>
       <% } %>
       <br><br>
