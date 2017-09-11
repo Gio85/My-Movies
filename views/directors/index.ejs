@@ -8,5 +8,15 @@
         <p><%= director.country %></p>
       </div>
     </li>
-  <% }) %>
+  <% if(locals.isAuthenticated) { %>
+
+  <a class="button is-primary" href="/directors/<%= director.id %>/edit">Edit</a>
+  
+  <form method="POST" action="/directors/<%= director.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button class="button is-danger">Delete</button>
+  </form>
+  <% } %>
+  
+    <% }) %>
 </ul>

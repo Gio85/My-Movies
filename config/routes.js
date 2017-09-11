@@ -31,6 +31,12 @@ router.route('/movies/:id')
 router.route('/movies/:id/edit')
   .get(secureRoute, movies.edit);
 
+router.route('/directors/:id/edit')
+  .get(secureRoute, directors.edit);
+
+router.route('/directors/:id')
+  .delete(secureRoute, directors.delete);
+
 router.route('/movies/:id/favorite')
   .post(secureRoute, movies.favorite);
 
