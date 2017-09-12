@@ -1,34 +1,35 @@
 <div class="container">
-  <form method="POST" action="/directors">
+  <form method="POST" action="/directors/<%= director.id %>">
+    <input type="hidden" name="_method" value="PUT">
     <div class="field">
       <label class="label">Name</label>
       <div class="control">
-        <input class="input" name="name" type="text" placeholder="Name" required>
+        <input class="input" name="name" type="text" value="<%= director.name %>"placeholder="Name" required>
       </div>
     </div>
     </div>
     <div class="field">
       <label class="label">IMDb link</label>
       <div class="control">
-        <input class="input" name="wiki" type="text" placeholder="IMDb link" required>
+        <input class="input" name="wiki" type="text" value="<%= director.wiki %>"placeholder="IMDb link" required>
       </div>
     </div>
     <div class="field">
       <label class="label">Country</label>
       <div class="control">
-        <input class="input" name="country" type="text" placeholder="Country" required>
+        <input class="input" name="country" type="text" value="<%= director.country %>"placeholder="Country" required>
       </div>
     </div>
     <div class="field">
       <label class="label">Synopsis</label>
       <div class="control">
-        <input class="input" name="synopsis" type="text" placeholder="Director summary" required>
+        <input class="input" name="synopsis" type="text" value="<%= director.synopsis %>"placeholder="Director summary" required>
       </div>
     </div>
     <div class="field">
       <label class="label">Image</label>
       <div class="control">
-        <input class="input" name="image" type="text" placeholder="Image" required>
+        <input class="input" name="image" type="text" value="<%= director.image %>"placeholder="Image" required>
       </div>
     </div>
     <div class="control">

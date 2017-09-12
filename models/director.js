@@ -5,6 +5,7 @@ const directorSchema = new mongoose.Schema({
   wiki: String,
   country: String,
   image: String,
+  user: {type: mongoose.Schema.ObjectId, ref: 'User'},
   synopsis: String
 });
 

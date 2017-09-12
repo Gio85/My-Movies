@@ -13,6 +13,7 @@ router.route('/directors')
   .get(directors.index)
   .post(secureRoute, directors.create);
 
+
 router.route('/directors/new')
   .get(secureRoute, directors.new);
 
@@ -35,6 +36,7 @@ router.route('/directors/:id/edit')
   .get(secureRoute, directors.edit);
 
 router.route('/directors/:id')
+  .put(secureRoute, directors.update)
   .delete(secureRoute, directors.delete);
 
 router.route('/movies/:id/favorite')
