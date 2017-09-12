@@ -22,10 +22,18 @@ If you do not have them, I would advise installing them with [homebrew](https://
 - Login redirects to previously viewed page (see `controllers/sessions.js`)
 - Users can add and favourite movies
 
+![BestMovie](https://user-images.githubusercontent.com/20437891/30336323-bf94103e-97dc-11e7-8989-b98c4142b4b3.png)
+
+![BestMovie](https://user-images.githubusercontent.com/20437891/30336425-132ce3ba-97dd-11e7-8128-b61044a67d44.png)
+
 - Users can add directors
+
+![BestMovie](https://user-images.githubusercontent.com/20437891/30336371-e52ee2a6-97dc-11e7-8470-5a93f61a5da7.png)
 
 - Users can only modify data they have added themselves
 - Users can add comments and rating to the movies
+
+![BestMovie](https://user-images.githubusercontent.com/20437891/30336479-2fc40e2c-97dd-11e7-8970-d3c9acc4cc4c.png)
 
 - User's movies populated with a virtual (see `models/user.js`)
 - Frontend form validation with HTML5 and [jQuery Validate Plugin](https://jqueryvalidation.org/)
