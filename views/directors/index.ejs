@@ -8,12 +8,19 @@
         <p><%= director.country %></p>
       </div>
     <% if(locals.isAuthenticated) { %>
-      <a class="button is-primary" href="/directors/<%= director.id %>/edit">Edit</a>
+      <a class="button is-primary is-outlined" href="/directors/<%= director.id %>/edit">
+      <span class="icon is-small">
+        <i class="fa fa-align-left"></i>
+      </span>
+      <span>Edit</span>
+      </a>
     <% } %>
     <% if(locals.isAuthenticated && director.user && director.user.id === locals.currentUser.id) {%>
       <form method="POST" action="/directors/<%= director.id %>">
         <input type="hidden" name="_method" value="DELETE">
-          <button class="button is-danger">Delete</button>
+        <button class="button is-danger is-outlined"><span>Delete</span><span class="icon is-small">
+          <i class="fa fa-times"></i>
+        </span></button>
       </form>
     <% } %>
     </li>

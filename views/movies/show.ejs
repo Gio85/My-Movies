@@ -16,11 +16,18 @@
       </div>
       <p><%= movie.filmSynopsis %></p>
       <% if(locals.isAuthenticated) { %>
-      <a class="button is-primary" href="/movies/<%= movie.id %>/edit">Edit</a>
+      <a class="button is-primary is-outlined" href="/movies/<%= movie.id %>/edit">
+      <span class="icon is-small">
+        <i class="fa fa-align-left"></i>
+      </span>
+      <span>Edit</span>
+      </a>
       <% if(locals.isAuthenticated && movie.user && movie.user.id === locals.currentUser.id) {%>
       <form method="POST" action="/movies/<%= movie.id %>">
         <input type="hidden" name="_method" value="DELETE">
-        <button class="button is-danger">Delete</button>
+        <button class="button is-danger is-outlined"><span>Delete</span><span class="icon is-small">
+          <i class="fa fa-times"></i>
+        </span></button>
       </form>
       <% } %>
       <% } %>
@@ -51,12 +58,13 @@
             <% if(locals.isAuthenticated && comment.user && comment.user.id === locals.currentUser.id) {%>
               <form method="POST" action="/movies/<%= movie.id %>/comments/<%= comment.id %>">
                 <input type="hidden" name="_method" value="DELETE">
-                <button class="button is-danger">Delete</button>
+                <button class="button is-danger is-outlined"><span>Delete</span><span class="icon is-small">
+                  <i class="fa fa-times"></i>
+                </span></button>
               </form>
             <% } %>
           </li>
           <% }) %>
-
         </ul>
   </div>
   </div>
