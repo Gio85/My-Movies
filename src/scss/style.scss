@@ -2,11 +2,14 @@
 
 $primary: orange;
 $danger: #f9628b;
-$family-serif: 'Playfair Display', serif;
+$family-serif: 'Georgia', serif;
 $family-primary: $family-serif;
 
 @import "bulma/bulma";
-
+.center{
+  margin: 0 auto;
+  width: 400px;
+}
 .hero.homepage {
   background-image: url(https://i.ytimg.com/vi/p4SHuC8syqA/maxresdefault.jpg);
   background-repeat:no-repeat;
@@ -63,6 +66,7 @@ p{
 }
 strong{
   color: white;
+  text-decoration: underline;
 }
 form.favorite button {
   background: transparent;

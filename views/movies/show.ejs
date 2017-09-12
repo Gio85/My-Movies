@@ -31,7 +31,7 @@
       <h3 class="title is-3">Links</h3>
       <div class="columns">
         <div class="column is-one-third">
-          <a href="<%= movie.youtube %>" target="_blank"><i class="fa fa-youtube-square fa-2x"></i>Youtube</a>
+          <a href="<%= movie.youtube %>" target="_blank"><i class="fa fa-youtube-square fa-2x"></i> Youtube</a>
         </div>
         <div class="column is-one-third">
           <a href="<%= movie.wiki %>" target="_blank"><i class="fa fa-wikipedia-w fa-2x"></i>Wikipedia</a>
@@ -41,26 +41,27 @@
       <a class="button is-primary" href="https://ororo.tv/en/channels" target="_blank">Streaming</a>
         </div>
       <% } %>
-      <br>
     </div>
-  </div>
-  </div>
-  <h4 class="title">Comments and Rating</h4>
-  <ul>
-    <% movie.comments.forEach(comment => { %>
-      <li>
-        <p><%= comment.text %> - <%= comment.rating %>/5 Added by <%= comment.user.username %></p>
-        <% if(locals.isAuthenticated && comment.user && comment.user.id === locals.currentUser.id) {%>
-          <form method="POST" action="/movies/<%= movie.id %>/comments/<%= comment.id %>">
-            <input type="hidden" name="_method" value="DELETE">
-            <button class="button is-danger">Delete</button>
-          </form>
-        <% } %>
-      </li>
-      <% }) %>
+    <br>
+      <h4 class="title">Comments and Rating</h4>
+      <ul>
+        <% movie.comments.forEach(comment => { %>
+          <li>
+            <p><%= comment.text %> - <%= comment.rating %>/5 Added by <%= comment.user.username %></p>
+            <% if(locals.isAuthenticated && comment.user && comment.user.id === locals.currentUser.id) {%>
+              <form method="POST" action="/movies/<%= movie.id %>/comments/<%= comment.id %>">
+                <input type="hidden" name="_method" value="DELETE">
+                <button class="button is-danger">Delete</button>
+              </form>
+            <% } %>
+          </li>
+          <% }) %>
 
-    </ul>
+        </ul>
+  </div>
+  </div>
     <% if(locals.isAuthenticated) { %>
+      <div class="center">
       <form method="POST" action="/movies/<%= movie.id %>/comments">
         <div class="field">
           <p>Leave your comment & rating below</p>
@@ -90,5 +91,6 @@
 
         <button class="button is-info">Add</button>
       </form>
+      </div>
         <% } %>
 </div>
