@@ -38,6 +38,10 @@ If you do not have them, I would advise installing them with [homebrew](https://
 - User's movies populated with a virtual (see `models/user.js`)
 - Frontend form validation with HTML5 and [jQuery Validate Plugin](https://jqueryvalidation.org/)
 
+#### The build
+
+* HTML 5, CSS, jQuery, Express, NodeJs were used to create this project. 
+ 
 ## Notes
 
 - Feel free to create an account and add movies and directors
