@@ -1,13 +1,12 @@
 <h1 class="title is-1">Directors</h1>
 <ul class="columns is-multiline">
   <% directors.forEach(director => { %>
-    <li class="column is-half">
+    <li class="column is-one-third">
       <div class="box">
         <a href="<%= director.wiki %>" target="_blank"><h2 class="title is-2"><%= director.name %></h2>
           <img src="<%= director.image %>" alt="<%= director.name %>"></a><p><%= director.synopsis %></p>
         <p><%= director.country %></p>
       </div>
-    </li>
     <% if(locals.isAuthenticated) { %>
       <a class="button is-primary" href="/directors/<%= director.id %>/edit">Edit</a>
     <% } %>
@@ -16,6 +15,7 @@
         <input type="hidden" name="_method" value="DELETE">
           <button class="button is-danger">Delete</button>
       </form>
-    <% } %>  
+    <% } %>
+    </li>
   <% }) %>
 </ul>
