@@ -7,7 +7,10 @@ function registrationsNew(req, res){
 function registrationsCreate(req, res) {
   User
     .create(req.body)
-    .then(() => res.redirect('/'))
+    .then(() => {
+      req.flash('info', 'Your accound has been created. Please login.' );
+      return res.redirect('/login');
+    })
     .catch(err => res.render('error', { err }));
 }
 
