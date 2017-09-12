@@ -1,17 +1,31 @@
 @import "bulma/sass/utilities/initial-variables";
 
 $primary: orange;
-// $danger: #f9628b;
-// $family-serif: 'Playfair Display', serif;
-// $family-primary: $family-serif;
+$danger: #f9628b;
+$family-serif: 'Playfair Display', serif;
+$family-primary: $family-serif;
 
 @import "bulma/bulma";
 
 .hero.homepage {
-  background-image: url(http://www.thetoc.gr/images/articles/0/article_5102/article5102.w_hr.jpg);
-  background-size: cover;
+  background-image: url(https://i.ytimg.com/vi/p4SHuC8syqA/maxresdefault.jpg);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
 }
-
+a.navbar-item:active{
+  color: #f44336;
+}
+a.navbar-item:hover {
+    background-color: transparent;
+    color: #f44336;
+}
+a:hover{
+  color: #f44336;
+}
+.navbar-item, .navbar-link{
+  color: white;
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -23,13 +37,17 @@ $primary: orange;
   background-color: black;
 }
 body{
-  background-color: grey;
+  background-color: black;
+  color: white;
 }
 .title, .subtitle{
   color: black;
 }
 p{
-  color: black;
+  color: white;
+}
+strong{
+  color: white;
 }
 form.favorite button {
   background: transparent;
