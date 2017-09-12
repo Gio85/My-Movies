@@ -7,7 +7,8 @@
     </div>
     <div class="column">
       <h3 class="title"><%= movie.title %></h3>
-      <h4 class="subtitle"><%= movie.year %></h4>
+      <%- movie.getStarIcons() %>
+      <h4><%= movie.year %></h4>
           <br>
           <br>
       <div class="icon is-small">
@@ -28,15 +29,23 @@
         <p>Added by: <strong><%= movie.user.username %></strong></p>
       <% } %>
       <h3 class="title is-3">Links</h3>
-      <a class="button is-primary" href="<%= movie.youtube %>" target="_blank">Youtube</a>
-      <a class="button is-primary" href="<%= movie.wiki %>" target="_blank">wikipedia</a>
+      <div class="columns">
+        <div class="column is-one-third">
+          <a href="<%= movie.youtube %>" target="_blank"><i class="fa fa-youtube-square fa-2x"></i>Youtube</a>
+        </div>
+        <div class="column is-one-third">
+          <a href="<%= movie.wiki %>" target="_blank"><i class="fa fa-wikipedia-w fa-2x"></i>Wikipedia</a>
+        </div>
       <% if(locals.isAuthenticated) { %>
+        <div class="column">
       <a class="button is-primary" href="https://ororo.tv/en/channels" target="_blank">Streaming</a>
+        </div>
       <% } %>
       <br>
     </div>
   </div>
-  <h4 class="subtitle is-4">Comments and Rating</h4>
+  </div>
+  <h4 class="title">Comments and Rating</h4>
   <ul>
     <% movie.comments.forEach(comment => { %>
       <li>
@@ -53,15 +62,15 @@
     </ul>
     <% if(locals.isAuthenticated) { %>
       <form method="POST" action="/movies/<%= movie.id %>/comments">
-        <div>
+        <div class="field">
           <p>Leave your comment & rating below</p>
         </div>
-        <div>
-          <label>Comment</label>
-          <textarea name="text"></textarea>
+        <div class="field">
+          <label class="label">Comment</label>
+          <textarea class="textarea is-one-third" name="text"></textarea>
         </div>
         <div>
-          <label>Rating</label><br>
+          <label label="label">Rating</label><br>
           <label>
             1 <input type="radio" value="1" name="rating">
           </label>

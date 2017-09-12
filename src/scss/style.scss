@@ -41,9 +41,24 @@ body{
   color: white;
 }
 .title, .subtitle{
+  color: white;
+}
+.card-content .title, .subtitle{
   color: black;
 }
 p{
+  color: white;
+}
+.box p {
+  color: black;
+  }
+.box h2 {
+  color: black;
+}
+.image img{
+  border: 1px solid white;
+}
+.label{
   color: white;
 }
 strong{
@@ -61,6 +76,11 @@ form.favorite button {
   position: fixed;
   width: 100%;
   z-index: 2;
+}
+.button.youtube {
+    background-color: red;
+    border-color: transparent;
+    color: black;
 }
 .section {
     padding: 5rem 1.5rem;

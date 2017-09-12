@@ -45,6 +45,7 @@ function moviesNew(req, res) {
 
 function moviesCreate(req, res) {
   req.body.user = req.currentUser;
+  console.log(req.body);
   Movie
     .create(req.body)
     .then(() => {

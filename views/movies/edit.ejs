@@ -12,13 +12,14 @@
       <div class="control">
         <div class="select">
           <select name="director">
+            <option selected disabled>Please choose</option>
             <% directors.forEach(director => { %>
-              <option value="<%= director.id %>" <% if(director.id === movie.director.id) { %>selected<% } %>><%= director.name %></option>
+              <option value="<%= director.id %>" <% if(movie.director && director.id === movie.director.id) { %>selected<% } %>><%= director.name %></option>
             <% }) %>
-            </select>
-          </div>
+          </select>
         </div>
       </div>
+    </div>
     <div class="field">
       <label class="label">Year</label>
       <div class="control">
@@ -28,13 +29,13 @@
     <div class="field">
       <label class="label">Wikipedia</label>
       <div class="control">
-        <input class="input" name="wiki" type="text" placeholder="Wikipedia link" required>
+        <input class="input" name="wiki" type="text" placeholder="Wikipedia link" value="<%= movie.wiki %>" required>
       </div>
     </div>
     <div class="field">
       <label class="label">Youtube</label>
       <div class="control">
-        <input class="input" name="youtube" type="text" placeholder="Youtube link" required>
+        <input class="input" name="youtube" type="text" placeholder="Youtube link" value="<%= movie.youtube %>" required>
       </div>
     </div>
     <div class="field">
