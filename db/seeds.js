@@ -6,7 +6,7 @@ const Director = require('../models/director');
 const Movie = require('../models/movie');
 
 // connect to the server
-const dbURI = 'mongodb://localhost/bestmovies';
+const { dbURI } = require('../config/environment');
 mongoose.connect(dbURI, { useMongoClient: true });
 
 // to not make multicopies of the collections
