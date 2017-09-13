@@ -11,7 +11,10 @@ function registrationsCreate(req, res) {
       req.flash('info', 'Your accound has been created. Please login.' );
       return res.redirect('/login');
     })
-    .catch(err => res.render('error', { err }));
+    .catch(() => {
+      req.flash('warning', 'Your username or email is already in use. Please change it.');
+      return res.render('registrations/new');
+    });
 }
 
 module.exports = {

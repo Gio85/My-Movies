@@ -33,14 +33,10 @@
         <% } %>
         <a href="/movies/<%= movie.id %>">
           <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="<%= movie.image %>" alt="<%= movie.title %>">
-              </figure>
-            </div>
+            <div class="card-image" style="background-image: url(<%= movie.image %>)"></div>
             <div class="card-content">
               <h3 class="title"><%= movie.title %></h3>
-              <h4 class="subtitle"><%= movie.year %></h4>
+              <h5><%= movie.year %></h5>
               <%- movie.getStarIcons() %>
             </div>
           </div>

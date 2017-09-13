@@ -10,12 +10,40 @@ $family-primary: $family-serif;
   margin: 0 auto;
   width: 400px;
 }
+.imgCard{
+  max-height: 334px;
+  min-height: 334px;
+}
+
+.card {
+  .card-image {
+    height: 460px;
+
+    @media screen and (max-width: 1216px) {
+      height: 320px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      height: 720px;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 800px;
+    }
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 .hero.homepage {
   background-image: url(https://i.ytimg.com/vi/p4SHuC8syqA/maxresdefault.jpg);
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
 }
+
 a.navbar-item:active{
   color: #f44336;
 }
@@ -48,6 +76,8 @@ body{
 }
 .card-content .title, .subtitle{
   color: black;
+  font-size: 21px;
+  margin-bottom: 0;
 }
 p{
   color: white;
