@@ -19,7 +19,7 @@
         <a id="register"class="navbar-item <% if(locals.activeR) {%>activeR<% }%>" href="/register">Register</a>
         <a id="login"class="navbar-item <% if(locals.activeL) {%>activeL<% }%>" href="/login">Login</a>
         <% } else {%>
-          <a id="favorites" class="navbar-item <% if(locals.activeF) {%>activeF<% }%>" href="/users/<%= locals.currentUser.id %>">My favorites</a>
+          <a id="favorites" class="navbar-item <% if(locals.activeF) {%>activeF<% }%>" href="/users/<%= locals.currentUser.id %>">My movies</a>
           <a id="newMovie" class="navbar-item <% if(locals.activeNm) {%>activeNm<% }%>" href="/movies/new">New Movie</a>
           <a id="newDirector" class="navbar-item <% if(locals.activeNd) {%>activeNd<% }%>" href="/directors/new">New Director</a>
           <a id="logout" class="navbar-item <% if(locals.activeL) {%>activeL<% }%>" href="/logout">Logout</a>
