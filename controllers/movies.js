@@ -93,10 +93,12 @@ function moviesEdit(req, res) {
 function moviesFavorite(req, res) {
   // if the selected movie is not in the user's favorites
   if(!req.currentUser.favorites.find(movie => movie.id === req.params.id)) {
+    req.flash('success', 'The movie has been added to your favorites.' );
     // add the movie id to the user's favorites
     req.currentUser.favorites.push(req.params.id);
   } else {
     // remove the movie from the user's favorites
+    req.flash('warning', 'The movie has been removed from your favorites.' );
     req.currentUser.favorites = req.currentUser.favorites.filter(movie => movie.id !== req.params.id);
   }
 

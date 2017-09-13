@@ -20,15 +20,15 @@
       </div>
     </div>
     <div class="field">
-      <label class="label">Synopsis</label>
-      <div class="control">
-        <input class="input" name="synopsis" type="text" value="<%= director.synopsis %>"placeholder="Director summary" required>
-      </div>
-    </div>
-    <div class="field">
       <label class="label">Image</label>
       <div class="control">
         <input class="input" name="image" type="text" value="<%= director.image %>"placeholder="Image" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Synopsis</label>
+      <div class="control">
+        <textarea class="textarea" name="synopsis" type="text" required><%= director.synopsis %></textarea>
       </div>
     </div>
     <div class="control">
