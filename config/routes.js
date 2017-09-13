@@ -7,7 +7,7 @@ const users = require('../controllers/users');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
 
-router.get('/', (req, res) => res.render('home', { isHomepage: true }));
+router.get('/', (req, res) => res.render('home', { isHomepage: true, activeH: true }));
 
 router.route('/directors')
   .get(directors.index)

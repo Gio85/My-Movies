@@ -1,6 +1,6 @@
   <nav class="navbar is-fixed-top">
     <div class="navbar-brand">
-      <a class="navbar-item" id="title" href="/">
+      <a class="navbar-item <% if(locals.activeH) {%>activeH<% }%>" id="title" href="/">
         <img src="https://cdn0.iconfinder.com/data/icons/awards-6/500/award_oscar-512.png" alt="BestMovies">
         &nbsp;
         Best Movies
@@ -13,16 +13,16 @@
     </div>
     <div id="mobile-menu" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item <% if(locals.active) {%>active<% }%>" href="/movies">Movies</a>
-        <a class="navbar-item <% if(locals.active) {%>active<% }%>" href="/directors">Directors</a>
+        <a id="movies" class="navbar-item <% if(locals.activeM) {%>activeM<% }%>" href="/movies">Movies</a>
+        <a id="directors"class="navbar-item <% if(locals.activeD) {%>activeD<% }%>" href="/directors">Directors</a>
         <% if(!locals.isAuthenticated) { %>
-        <a class="navbar-item" href="/register">Register</a>
-        <a class="navbar-item" href="/login">Login</a>
+        <a id="register"class="navbar-item <% if(locals.activeR) {%>activeR<% }%>" href="/register">Register</a>
+        <a id="login"class="navbar-item <% if(locals.activeL) {%>activeL<% }%>" href="/login">Login</a>
         <% } else {%>
-          <a class="navbar-item" href="/users/<%= locals.currentUser.id %>">My favorites</a>
-          <a class="navbar-item" href="/movies/new">New Movie</a>
-          <a class="navbar-item" href="/directors/new">New Director</a>
-          <a class="navbar-item" href="/logout">Logout</a>
+          <a id="favorites" class="navbar-item <% if(locals.activeF) {%>activeF<% }%>" href="/users/<%= locals.currentUser.id %>">My favorites</a>
+          <a id="newMovie" class="navbar-item <% if(locals.activeNm) {%>activeNm<% }%>" href="/movies/new">New Movie</a>
+          <a id="newDirector" class="navbar-item <% if(locals.activeNd) {%>activeNd<% }%>" href="/directors/new">New Director</a>
+          <a id="logout" class="navbar-item <% if(locals.activeL) {%>activeL<% }%>" href="/logout">Logout</a>
           <% } %>
       </div>
     </div>

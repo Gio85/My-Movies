@@ -7,7 +7,7 @@ function directorsIndex(req, res) {
     .populate('user')
     .exec()
     .then((directors) =>{
-      res.render('directors/index', {directors});
+      res.render('directors/index', {directors, activeD: true});
     })
     .catch((err) =>{
       res.status(500).render('error', { err });
@@ -19,7 +19,7 @@ function directorsNew(req, res) {
     .find()
     .exec()
     .then((directors) =>{
-      res.render('directors/new', {directors});
+      res.render('directors/new', {directors, activeNd: true});
     })
     .catch((err) => {
       res.status(500).render('error', { err });
@@ -42,7 +42,7 @@ function directorsEdit(req, res) {
   Director
     .findById(req.params.id)
     .exec()
-    .then(director => res.render('directors/edit', { director }))
+    .then(director => res.render('directors/edit', { director, activeD: true }))
     .catch(err => res.status(500).render('error', { err })
     );
 }

@@ -49,9 +49,32 @@ html, body {
   background-position:center;
 }
 
-a.navbar-item.active{
+a.navbar-item.activeM{
   color: #f44336;
 }
+a.navbar-item.activeD{
+  color: #f44336;
+}
+a.navbar-item.activeH{
+  color: #f44336;
+}
+
+a.navbar-item.activeF{
+  color: #f44336;
+}
+a.navbar-item.activeNm{
+  color: #f44336;
+}
+a.navbar-item.activeNd{
+  color: #f44336;
+}
+a.navbar-item.activeR{
+  color: #f44336;
+}
+a.navbar-item.activeL{
+  color: #f44336;
+}
+
 a.navbar-item:hover {
     background-color: transparent;
     color: #f44336;
