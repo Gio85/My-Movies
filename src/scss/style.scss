@@ -144,6 +144,12 @@ form.favorite button {
   color: red;
   outline: none;
   z-index: 1;
+  cursor: pointer;
+}
+form.favorite button:hover {
+    background-color: red;
+    border-radius: 50%;
+    color: white;
 }
 .is-fixed-top{
   position: fixed;
