@@ -11,7 +11,7 @@ function moviesIndex(req, res) {
         .find()
         .exec()
         .then(directors => {
-          res.render('movies/index', { movies, directors, selectedDirector: req.query.director });
+          res.render('movies/index', { movies, directors, selectedDirector: req.query.director, active: true });
         });
     })
     .catch((err) => res.status(500).render('error', { err }));
@@ -24,7 +24,7 @@ function moviesShow(req, res) {
     .exec()
     .then((movie) => {
       if(!movie) return res.status(404).send('Not Found');
-      res.render('movies/show', {movie});
+      res.render('movies/show', {movie, active: true});
     })
     .catch((err) => {
       res.status(500).render('error', {err});

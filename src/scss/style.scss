@@ -6,6 +6,11 @@ $family-serif: 'Georgia', serif;
 $family-primary: $family-serif;
 
 @import "bulma/bulma";
+
+html, body {
+  min-height: 100vh;
+}
+
 .center{
   margin: 0 auto;
   width: 400px;
@@ -44,7 +49,7 @@ $family-primary: $family-serif;
   background-position:center;
 }
 
-a.navbar-item:active{
+a.navbar-item.active{
   color: #f44336;
 }
 a.navbar-item:hover {

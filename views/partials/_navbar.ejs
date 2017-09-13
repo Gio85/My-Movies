@@ -13,8 +13,8 @@
     </div>
     <div id="mobile-menu" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="/movies">Movies</a>
-        <a class="navbar-item" href="/directors">Directors</a>
+        <a class="navbar-item <% if(locals.active) {%>active<% }%>" href="/movies">Movies</a>
+        <a class="navbar-item <% if(locals.active) {%>active<% }%>" href="/directors">Directors</a>
         <% if(!locals.isAuthenticated) { %>
         <a class="navbar-item" href="/register">Register</a>
         <a class="navbar-item" href="/login">Login</a>
