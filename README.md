@@ -1,4 +1,4 @@
-# BestMovie:
+# MyMovies:
 ###GA WDI London - Project 2
 
 This is an example RESTful Express App with EJS for a project at General Assembly.
