@@ -3,7 +3,7 @@
 
 This is an example RESTful Express App with EJS for a project at General Assembly.
 
-You can find it [here](https://bestmovies88.herokuapp.com/)
+You can find it [here](https://mycollectionmovies.herokuapp.com/)
 
 ![BestMovie](https://user-images.githubusercontent.com/20437891/30335930-7f07ee42-97db-11e7-8466-51855bbca997.png)
 
